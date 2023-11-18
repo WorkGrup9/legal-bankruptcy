@@ -4,7 +4,7 @@
     --color-element:linear-gradient(to bottom left,#7ACA37,#098C58);
 }
 
-body{
+body{ 
     padding: 0vw 10vw;
     background: var(--main-color);
 }
