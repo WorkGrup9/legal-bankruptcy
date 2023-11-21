@@ -5,7 +5,7 @@
     grid-gap: 20px;
 }
 /* start style header */
-header {
+.header {
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -34,7 +34,7 @@ header {
 }
 .searchTerm {
     width: 100%;
-    background-color: #121212;
+    background-color: var(--main-color);;
     border: 1px solid #121212;
     border-right: none;
     padding: 5px;
@@ -48,9 +48,9 @@ header {
 .searchButton {
     height: 32px;
     border: 1px solid #121212;
-    background: #121212;
+    background:var(--main-color);
     text-align: center;
-    color: #121212;
+    color: var(--main-color);
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
@@ -62,10 +62,10 @@ header {
     align-items: center;
     gap: 8px;
     border-radius: 8px;
-    background: linear-gradient(220deg, #7ACA37 15.98%, #70C53A 28.3%, #56B641 48.98%, #2C9F4E 75.34%, #098C58 94.49%);
+    background: var(--color-element);
 } 
 .button_header {
-    background: linear-gradient(220deg, #7ACA37 15.98%, #70C53A 28.3%, #56B641 48.98%, #2C9F4E 75.34%, #098C58 94.49%);
+    background: var(--color-element);
     cursor: pointer;
     border: aliceblue;
 }
@@ -97,6 +97,52 @@ span {
     font-weight: 400;
     line-height: 20px;
 }
+
+
+/* start style menu */
+.menu {
+    display: flex;
+    padding: 12px 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background: var(--color-element);
+}
+.frame_555 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.frame_555:hover{
+    font-weight: bold;
+    transition: 0.3s linear;
+
+}
+.header_list {
+    list-style: none;
+}
+.line_menu {
+    width: 3%;
+    border-top: 3px solid #262626;
+    transform: rotate(90deg);
+    margin-top: 8px;
+}
+.header_link a {
+    color: #262626;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    text-decoration: none;
+} 
+.header_link a:visited {
+    background: linear-gradient(220deg, #ca5e37 15.98%, #c55f3a 28.3%, #b44226 48.98%, #9f2c94 75.34%, #8c092a 94.49%);
+}
+    /* end style menu */
 /* end style header */
 
 .item-1 {
