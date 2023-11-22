@@ -100,47 +100,89 @@ span {
 
 
 /* start style menu */
-.menu {
-    display: flex;
-    padding: 12px 0;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    background: var(--color-element);
-}
 .frame_555 {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: stretch;
+    position: relative;
+    background: var(--color-element)    
 }
-
-.frame_555:hover{
-    font-weight: bold;
-    transition: 0.3s linear;
-
+.frame_555:before,
+.frame_555:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  height: 3px;
 }
-.header_list {
+.frame_555:before {
+    top: 0;
+    border-bottom: 1px dashed rgba(255,255,255,.2);
+  }
+  .frame_555:after {
+    bottom: 0;
+    border-top: 1px dashed rgba(255,255,255,.2);
+  }
+  .menu-main {
     list-style: none;
-}
-.line_menu {
-    width: 3%;
-    border-top: 3px solid #262626;
-    transform: rotate(90deg);
-    margin-top: 8px;
-}
-.header_link a {
-    color: #262626;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+.menu-main:before,
+.menu-main:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 0;
+    top: 8px;
+  }
+  .menu-main:before {
+    left: -30px;
+    border-left: 12px solid rgba(255, 255, 255, 0);
+  }
+  .menu-main:after {
+    right: -30px;
+    border-right: 12px solid rgba(255, 255, 255, 0);
+  }
+.menu-main li {
+    display: inline-block;
+    margin-right: -4px;
+    cursor: pointer;
+  }
+  .menu-main a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--gray-gray-9, #262626);
     font-family: Gilroy;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
-    text-decoration: none;
-} 
-.header_link a:visited {
-    background: linear-gradient(220deg, #ca5e37 15.98%, #c55f3a 28.3%, #b44226 48.98%, #9f2c94 75.34%, #8c092a 94.49%);
+    transition: .3s linear;
+  }
+.menu-main a.current,
+.menu-main a:hover {background: rgba(0,0,0,.2);}
+/* @media (max-width: 680px) {
+.top-menu {margin: 0;}
+.menu-main li {
+  display: block;
+  margin-right: 0;
+}
+.menu-main:before, 
+.menu-main:after {content: none;}
+.menu-main a {display: block;}
+} */
+.menu_main_line {
+    transform: rotate(90deg);
+    width: 2%;
+    height: 2px;
+    background-color: #262626;
+    position: absolute;
+    top: 25px;
+}
+.menu_image {
+    cursor: pointer;
 }
     /* end style menu */
 /* end style header */
